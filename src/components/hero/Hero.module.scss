@@ -1,0 +1,367 @@
+.hero {
+  padding: 20px 0 80px;
+}
+
+.container {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+
+  min-height: 680px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  background: #0c0d0f;
+  color: white;
+
+  padding: 80px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 620px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 28px;
+
+  color: #b7bbc3;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--color-yellow);
+}
+
+h1 {
+  max-width: 680px;
+
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
+  font-weight: 800;
+
+  span {
+    display: block;
+
+    color: var(--color-yellow);
+  }
+}
+
+.description {
+  max-width: 520px;
+
+  margin: 30px 0 22px;
+
+  color: #a8abb3;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #a8abb3;
+
+  font-size: 13px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+
+  color: var(--color-yellow);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 52px;
+
+  padding: 0 22px;
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.primaryButton {
+  background: var(--color-yellow);
+  color: #111;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: #fff000;
+  }
+}
+
+.secondaryButton {
+  border: 1px solid #303239;
+
+  color: white;
+
+  &:hover {
+    background: #18191d;
+  }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: 38px;
+
+  color: #9da1aa;
+
+  font-size: 13px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  svg {
+    color: var(--color-green);
+  }
+}
+
+.productArea {
+  position: relative;
+
+  display: grid;
+  min-height: 500px;
+
+  place-items: center;
+}
+
+.yellowShape {
+  position: absolute;
+
+  width: 440px;
+  height: 440px;
+
+  border-radius: 50%;
+
+  background: var(--color-yellow);
+
+  filter: blur(0);
+
+  transform: rotate(-12deg);
+}
+
+.productCard {
+  position: relative;
+  z-index: 2;
+
+  width: 330px;
+  min-height: 430px;
+
+  padding: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #111;
+
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+
+  transform: rotate(4deg);
+}
+
+.cardLabel {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.mockProduct {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 310px;
+}
+
+.handle {
+  position: absolute;
+
+  width: 30px;
+  height: 145px;
+
+  top: 30px;
+
+  border-radius: 15px;
+
+  background: #25262a;
+
+  transform: rotate(-18deg);
+}
+
+.handleGrip {
+  position: absolute;
+
+  inset: 12px 5px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #111, #444, #111);
+}
+
+.roller {
+  position: absolute;
+
+  width: 145px;
+  height: 90px;
+
+  top: 145px;
+
+  border-radius: 45px;
+
+  background: #f3f3f3;
+
+  box-shadow:
+    inset -12px 0 20px rgba(0, 0, 0, 0.08),
+    0 15px 25px rgba(0, 0, 0, 0.15);
+
+  transform: rotate(-18deg);
+}
+
+.rollerLines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 18px 20px;
+
+  span {
+    display: block;
+
+    height: 2px;
+
+    background: #d5d5d5;
+  }
+}
+
+.productCaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  strong {
+    font-size: 17px;
+    letter-spacing: -0.03em;
+  }
+
+  span {
+    color: #777;
+
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+
+    padding: 60px 40px;
+  }
+
+  .productArea {
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8px 0 40px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+
+    padding: 50px 24px;
+
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .productArea {
+    min-height: 380px;
+  }
+
+  .yellowShape {
+    width: 300px;
+    height: 300px;
+  }
+
+  .productCard {
+    width: 270px;
+    min-height: 370px;
+  }
+
+  .mockProduct {
+    height: 255px;
+  }
+}

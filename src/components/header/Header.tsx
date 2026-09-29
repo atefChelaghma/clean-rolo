@@ -1,5 +1,6 @@
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import styles from './Header.module.scss';
+import { trackAffiliateClick } from '../../lib/analytics';
 
 export function Header() {
   return (
@@ -18,7 +19,15 @@ export function Header() {
           <a href="#how-it-works">Como funciona</a>
         </nav>
 
-        <a href="#product" className={styles.cta}>
+        <a
+          href="#product"
+          className={styles.cta}
+          onClick={() =>
+            trackAffiliateClick({
+              location: 'header',
+            })
+          }
+        >
           Ver produto
           <ArrowUpRight size={17} />
         </a>
